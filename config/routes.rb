@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   #get "about-us", to: "about#index", as: :about
   get "about", to: "about#index"
 
+  get "sign_up", to:"registrations#new"
+  post "sign_up", to: "registrations#create"
+
   root to: "main#index"
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
