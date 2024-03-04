@@ -12,6 +12,10 @@ class TwitterAccountsController < ApplicationController
         redirect_to twitter_accounts_path, notice: "Successfully disconnected @#{@twitter_account.username}"
     end
 
+    def edit
+    end    
+
+
     private
 
     #helps prevent duplication, if had like a def show
