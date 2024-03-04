@@ -22,6 +22,13 @@ Rails.application.routes.draw do
 
   get "/auth/twitter/callback", to: "omniauth_callbacks#twitter"
   
+  resources :twitter_accounts 
+  #creates these automatically
+  ##get "twitter_accounts/:id"
+  ##delete "twitter_accounts/:id"
+
+
+
   root to: "main#index"
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
