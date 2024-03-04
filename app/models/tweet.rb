@@ -9,4 +9,8 @@ class Tweet < ApplicationRecord
     self.publish_at ||= 24.hours.from_now
   end
 
+  def published?
+    tweet_id? #? returns true or false if value is retured
+  end
+
 end

@@ -4,7 +4,10 @@
     <% if Current.user.twitter_accounts.any? %>
         <%= link_to "Schedule a Tweet", new_tweet_path, class: "btn btn-primary" %>
     <% end %>
+</div>
 
-    <% if Current.user.twitter_accounts.none? %>
-        <%= button_to "Connect your Twitter account",  "/auth/twitter", method: :post, class: "btn btn-primary", :data => {turbo: "false"} %>
-    <% end %>
+<% if Current.user.twitter_accounts.none? %>
+    <%= button_to "Connect your Twitter account",  "/auth/twitter", method: :post, class: "btn btn-primary", :data => {turbo: "false"} %>
+<% end %>
+
+<%= render @tweets %>
