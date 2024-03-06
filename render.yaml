@@ -3,11 +3,13 @@ databases:
     ipAllowList: []
     databaseName: scheduled_tweets
     user: scheduled_tweets
+    plan: free
 
 services:
   - type: web
     name: scheduled_tweets
     env: ruby
+    plan: free
     buildCommand: "./render-build.sh"
     startCommand: "bundle exec rails s"
     envVars:
