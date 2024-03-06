@@ -20,4 +20,6 @@ services:
       - key: RAILS_MASTER_KEY
         sync: false
       - key: RAILS_ENV
+        sync: false
       - key: RACK_ENV
+        sync: false
